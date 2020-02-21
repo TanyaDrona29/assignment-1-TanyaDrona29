@@ -41,5 +41,18 @@ public class Person {
     public void setFirstName(String fristName) {
         this.firstName = firstName;
     }
-
+    public String toString() {
+        final StringBuffer stringBuffer = new StringBuffer("------- * ------- * ------- * --------\n");
+        stringBuffer.append("First Name: ").append(firstName).append("\n");
+        stringBuffer.append("Last Name: ").append(lastName).append("\n");
+        stringBuffer.append("Contact List: ").append(numberList).append("\n");
+        stringBuffer.append("[");
+        for (int i = 0; i <numberList.length; i++) {
+            stringBuffer.append((numberList[i]!= null && i!= numberList.length ? numberList[i]:""));
+            stringBuffer.append("]");
+        }
+        stringBuffer.append("\nemail=").append(emailAddress).append('\n');
+        stringBuffer.append("------ * ------ * ------- * ------");
+        return stringBuffer.toString();
+    }
 }
