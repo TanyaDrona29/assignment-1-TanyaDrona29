@@ -6,11 +6,11 @@ public class Person {
     private String[] numberList = new String[10];
     private String[] emailAddress = new String[10];
 
-    public Person(String firstName) {
+    public Person() {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.numberList =  numberList;
         this.emailAddress = emailAddress;
+        this.numberList = numberList;
     }
 
     public String[] getEmailAddress() {
