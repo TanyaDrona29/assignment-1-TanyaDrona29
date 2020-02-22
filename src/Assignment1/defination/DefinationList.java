@@ -6,6 +6,8 @@ import Assignment1.PersonDetails.Person;
 import java.util.ArrayList;
 
 public class DefinationList<Person> implements LinkedListADT<Person> {
+
+
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
@@ -18,9 +20,22 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
             this.data = data;
             this.next = null;
         }
+
+        public Person getData() {
+            return data;
+        }
+
+        public void setData(Person data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
     }
-    private ArrayList<String> Name = new ArrayList<>();
-    private ArrayList<String> FirstName = new ArrayList<>();
-    private Node<Person> head = null;
-    private int size = 0;
+
 }
