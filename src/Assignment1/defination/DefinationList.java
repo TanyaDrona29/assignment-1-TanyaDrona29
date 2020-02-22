@@ -18,6 +18,11 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         }
         return temp;
     }
+    private void addFirst(Person details) {
+        head = new Node<Person>(head, details);
+        size++;
+
+    }
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
