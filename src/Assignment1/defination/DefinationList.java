@@ -6,7 +6,10 @@ import Assignment1.PersonDetails.Person;
 import java.util.ArrayList;
 
 public class DefinationList<Person> implements LinkedListADT<Person> {
-
+    private ArrayList<String> name = new ArrayList<>();
+    private ArrayList<String> firstName = new ArrayList<>();
+    private Node<Person> head = null;
+    private int size = 0;
 
     private static class Node<Person>{
         private Node next = null;
