@@ -11,6 +11,13 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
     private Node<Person> head = null;
     private int size = 0;
 
+    public Node<Person> getNode(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
+    }
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
