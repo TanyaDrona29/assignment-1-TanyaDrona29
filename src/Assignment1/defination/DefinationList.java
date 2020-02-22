@@ -23,6 +23,14 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         size++;
 
     }
+    private void addAfter(Node node, Person details) {
+        Node<Person> temp = node;
+        if (node != null) {
+            temp.next = new Node(node.next, details);
+            size++;
+        }
+
+    }
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
