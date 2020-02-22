@@ -10,6 +10,12 @@ public class DefinationClass<Person> implements LinkedListADT<Person> {
     private ArrayList<String> FirstName = new ArrayList<>();
     private Node<Person> head = null;
     private int size = 0;
+    public Node<Person> getNode(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
 
     public Node(Node next, Person data) {
         this.next = next;
