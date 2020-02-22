@@ -37,4 +37,11 @@ public class Person {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public Person(String firstName, String lastName, String[] contactList, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.numberList = numberList;
+        this.emailAddress = emailAddress;
+    }
 }
