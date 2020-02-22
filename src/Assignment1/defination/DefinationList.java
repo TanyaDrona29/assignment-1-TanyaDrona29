@@ -29,9 +29,20 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
             temp.next = new Node(node.next, details);
             size++;
         }
-
     }
-    private static class Node<Person>{
+    private void add(int index, Person details) {
+        if (index == 0) {
+            addFirst(details);
+        }
+        if (index < 0 && index > size) {
+            throw new IndexOutOfBoundsException("the index is invalid");
+        } else {
+            Node node = getNode(index - 1);
+            addAfter(node.next, details);
+
+        }
+    }
+        private static class Node<Person>{
         private Node next = null;
         private Person data = null;
 
