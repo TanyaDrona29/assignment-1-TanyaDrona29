@@ -40,6 +40,10 @@ public class DefinationClass<Person> implements LinkedListADT<Person> {
                     addAfter(node.next, details);
 
                 }
+                public boolean add(Person details) {
+                    add(size, details);
+                    return true;
+                }
 
     public Node(Node next, Person data) {
         this.next = next;
