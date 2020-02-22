@@ -23,7 +23,12 @@ public class DefinationClass<Person> implements LinkedListADT<Person> {
             size++;
 
         }
-
+        private void addAfter(Node node, Person details) {
+            Node<Person> temp = node;
+            if (node != null) {
+                temp.next = new Node(node.next, details);
+                size++;
+            }
 
     public Node(Node next, Person data) {
         this.next = next;
