@@ -1,6 +1,7 @@
 package Assignment1.defination;
 
 import Assignment1.ADT.LinkedListADT;
+import javafx.scene.Node;
 //import javafx.scene.Node;
 
 import java.util.ArrayList;
@@ -16,6 +17,13 @@ public class DefinationClass<Person> implements LinkedListADT<Person> {
             temp = temp.getNext();
         }
         return temp;
+
+        private void addFirst(Person details) {
+            head = new Node<Person>(head, details);
+            size++;
+
+        }
+
 
     public Node(Node next, Person data) {
         this.next = next;
