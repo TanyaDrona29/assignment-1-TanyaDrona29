@@ -44,4 +44,18 @@ public class Person {
         this.numberList = numberList;
         this.emailAddress = emailAddress;
     }
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("-------- * -------- * -------- * --------\n");
+        sb.append("First Name: ").append(firstName).append('\n');
+        sb.append("Last Name: ").append(lastName).append('\n');
+        sb.append("Contact List: ").append(numberList);
+
+        for (int i = 0; i < numberList.length; i++) {
+            sb.append((numberList[i] != null && i != numberList.length ? numberList[i] : ""));
+
+        }
+        sb.append("\nemail='").append(emailAddress).append('\n');
+        sb.append("-------- * -------- * -------- * --------");
+        return sb.toString();
+    }
 }
