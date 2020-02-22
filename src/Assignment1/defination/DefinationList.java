@@ -42,6 +42,10 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
 
         }
     }
+    public boolean add(Person details) {
+        add(size, details);
+        return true;
+    }
         private static class Node<Person>{
         private Node next = null;
         private Person data = null;
