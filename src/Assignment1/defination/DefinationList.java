@@ -72,8 +72,37 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         }
         return temporary;
     }
+    public ArrayList<String> getName() {
+        return name;
+    }
 
-        private static class Node<Person>{
+    public void setName(String FirstName, String lastname) {
+        firstName.add(FirstName + lastname);
+    }
+
+    public ArrayList<String> getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String FirstName) {
+        name.add(FirstName);
+    }
+    public Node<Person> getHead() {
+        return head;
+    }
+
+    public void setHead(Node<Person> head) {
+        this.head = head;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+    private static class Node<Person>{
         private Node next = null;
         private Person data = null;
 
