@@ -58,6 +58,20 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         }
         return temporary;
     }
+    private Person removeAfter(Node<Person> node) {
+        Person temporary = null;
+        Node<Person> response = node.getNext();
+        if (response != null) {
+            node.next = response.getNext();
+            size--;
+            temporary = response.getData();
+        }
+        if (temporary == null) {
+            node = null;
+            size--;
+        }
+        return temporary;
+    }
 
         private static class Node<Person>{
         private Node next = null;
