@@ -46,6 +46,19 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         add(size, details);
         return true;
     }
+    private Person removeFirst() {
+        Person temporary = null;
+        Node<Person> node = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (node != null) {
+            size--;
+            temporary = node.getData();
+        }
+        return temporary;
+    }
+
         private static class Node<Person>{
         private Node next = null;
         private Person data = null;
