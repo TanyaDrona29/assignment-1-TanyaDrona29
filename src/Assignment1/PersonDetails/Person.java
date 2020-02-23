@@ -38,12 +38,13 @@ public class Person {
         this.firstName = firstName;
     }
 
-    public Person(String firstName, String lastName, String[] contactList, String email) {
+    public Person(String firstName, String lastName, String[] numberList, String emailAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.numberList = numberList;
         this.emailAddress = emailAddress;
     }
+    @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("-------- * -------- * -------- * --------\n");
         sb.append("First Name: ").append(firstName).append('\n');
