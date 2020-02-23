@@ -137,10 +137,18 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         } else {
             System.out.println("NO MATCH FOUND!");
         }
+    }
+    public void viewAllDetails() {
+        if (size != 0) {
+            System.out.println("---Here are your all contacts---");
+            for (int i = 0; i < size; i++) {
 
-
-
-
+                Person data = this.getNode(i).getData();
+                System.out.print(data);
+            }
+        } else {
+            System.out.println("NO RESULTS FOUND!");
+        }
     }
 
     private static class Node<Person>{
