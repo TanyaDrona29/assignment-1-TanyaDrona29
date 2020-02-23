@@ -12,6 +12,35 @@ public class Person {
         this.numberList = numberList;
     }
 
+    public static String[] getNumberList() {
+        return numberList;
+    }
 
+    public static void setNumberList(String[] numberList) {
+        Person.numberList = numberList;
+    }
 
+    public static String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public static void setEmailAddress(String emailAddress) {
+        Person.emailAddress = emailAddress;
+    }
+
+    public static String getLastName() {
+        return lastName;
+    }
+
+    public static void setLastName(String lastName) {
+        Person.lastName = lastName;
+    }
+
+    public static String getFirstName() {
+        return firstName;
+    }
+
+    public static void setFirstName(String firstName) {
+        Person.firstName = firstName;
+    }
 }
