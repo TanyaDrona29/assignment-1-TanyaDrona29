@@ -118,6 +118,31 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
         }
         return response;
     }
+    int count = 0;
+    public void search(String person) {
+
+        for (int i = 0; i < firstName.size(); i++) {
+            if (person.compareTo( firstName.get(i).toString()) == 0) {
+                count++;
+            }
+        }
+        if (count != 0) {
+            System.out.println(count + " match found!");
+            for (int i = 0; i < firstName.size(); i++) {
+                if (person.compareTo(firstName.get(i).toString()) == 0) {
+                    Node<Person> personNode = getNode(i);
+                    System.out.println(personNode.getData().toString());
+                }
+            }
+        } else {
+            System.out.println("NO MATCH FOUND!");
+        }
+
+
+
+
+    }
+
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
