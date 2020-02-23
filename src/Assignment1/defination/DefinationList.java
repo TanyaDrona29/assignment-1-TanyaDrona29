@@ -102,6 +102,22 @@ public class DefinationList<Person> implements LinkedListADT<Person> {
     public void setSize(int size) {
         this.size = size;
     }
+    public boolean delete(int index) {
+        boolean response = false;
+        if (index - 1 < 0 || (index - 1) > getSize()) {
+            throw new IndexOutOfBoundsException(Integer.toString(index - 1));
+        } else if (index - 1 == 0) {
+            removeFirst();
+            name.remove(index - 1);
+            response = true;
+        } else {
+            Node<Person> previousNode = getNode(index - 1);
+            removeAfter(previousNode);
+            name.remove(index - 1);
+            response = true;
+        }
+        return response;
+    }
     private static class Node<Person>{
         private Node next = null;
         private Person data = null;
